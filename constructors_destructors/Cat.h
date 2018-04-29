@@ -6,10 +6,9 @@ private:
 //	bool happy = true;	//c++11
 	bool happy;
 public:
-	void makeHappy();
-	void makeSad();
 	void speak();
-	void jump();
+	Cat();
+	~Cat();
 };
 
 #endif

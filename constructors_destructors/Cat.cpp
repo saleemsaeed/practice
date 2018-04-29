@@ -2,22 +2,19 @@
 #include "Cat.h"
 using namespace std;
 
+Cat::Cat() {
+	cout << "Cat created" << endl;
+	happy = true;
+}
+
+Cat::~Cat() {
+	cout << "Cat destroyed" << endl;
+}
+
 void Cat::speak() {
 	if (happy) {
 		cout << "Meow!" << endl;	
 	} else {
 		cout << "Ssss!" << endl;
 	}
-}
-
-void Cat::jump() {
-	cout << "I am jumping" << endl;
-}
-
-void Cat::makeHappy(){
-	happy = true;
-}
-
-void Cat::makeSad(){
-	happy = false;
 }
