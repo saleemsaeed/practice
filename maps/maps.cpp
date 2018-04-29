@@ -10,9 +10,20 @@ int main() {
 	ages["Mike"] = 70;
 	cout << ages["Raj"] << endl;
 	//cout << ages["Sue"] << endl;  // creates a new element named Sue value 0
- 
-	if(ages.find("Vicky1") != ages.end()) {
-		cout <<"Found Vicky" << endl;
+ 	//pair<string, int> addToMap("Peter",100);
+ 	//ages.insert(addToMap);
+	ages.insert()
+
+	if(ages.find("Vicky1") != ages.end()) {	//search for Vicky1
+		cout <<"Found Vicky1" << endl;
+	}
+	else { 
+		cout << "Key not found" << endl;
+	}
+	
+	for(map<string,int>::iterator it=ages.begin(); it != ages.end(); it++) {
+		pair<string, int> age = *it;
+		cout << age.first << ": " << age.second << endl;
 	}
 
 	for(map<string,int>::iterator it=ages.begin(); it != ages.end(); it++) {

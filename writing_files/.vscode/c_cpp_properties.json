@@ -45,7 +45,11 @@
         {
             "name": "Win32",
             "includePath": [
-                "${workspaceFolder}"
+                "${workspaceFolder}",
+                "C:\\MinGW\\lib\\gcc\\mingw32\\6.3.0\\include",
+                "C:\\MinGW\\lib\\gcc\\mingw32\\6.3.0\\include\\c++\\mingw32",
+                "C:\\MinGW\\lib\\gcc\\mingw32\\6.3.0\\include\\c++\\tr1",
+                "C:\\MinGW\\include"
             ],
             "defines": [
                 "_DEBUG",
