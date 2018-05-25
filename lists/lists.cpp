@@ -28,7 +28,7 @@ int main() {
 			it = numbers.erase(it);
 		}
 		else {
-			it ++;
+			it++;
 		}
 	}
 

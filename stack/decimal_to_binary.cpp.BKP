@@ -1,0 +1,39 @@
+#include <queue>
+#include <string>
+#include <iostream>
+
+using namespace std;
+
+void convert(int n) {
+	static queue<int> remainder; //keep the same queue for all of the recursive calls
+	static int maxOnes=0;
+	static int oneCounter=0;
+	int m = n/2;
+	remainder.push(m%2);
+	if (m>0) {
+		convert(m);
+	} else {
+		while (!remainder.empty()) {
+			cout << remainder.front();
+			if (remainder.front()==1) {
+				oneCounter++;
+			} else {
+				if (oneCounter>maxOnes) {
+					maxOnes=oneCounter;
+				}
+				oneCounter = 0;
+			}
+			remainder.pop();
+		}
+	}
+	cout << "Max ones: " << maxOnes << endl;
+}
+
+
+int main(){
+	cout << "Enter the number you want to convert to binary: ";
+    int n;
+    cin >> n;
+    convert(n);
+    return 0;
+}

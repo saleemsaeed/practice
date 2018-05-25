@@ -1,0 +1,29 @@
+/* Hidden stub code will pass a root argument to the function below. Complete the function to solve the challenge. Hint: you may want to write one or more helper functions.  
+
+The Node struct is defined as follows:
+   struct Node {
+      int data;
+      Node* left;
+      Node* right;
+   }
+*/
+    vector<int> inOrder(Node* root) {
+        static vector<int> elements;
+        if(root!=NULL){
+            inOrder(root->left);
+            elements.push_back(root->data);
+            inOrder(root->right);
+        }
+        return elements;
+    }
+    bool checkBST(Node* root) {
+        vector<int> traversedTree;
+        traversedTree=inOrder(root);
+        int next;
+        for (vector<int>::iterator it=traversedTree.begin(); it!=traversedTree.end()-1;it++) {
+            next=*(it+1);
+            //cout << next << *it << endl;
+            if (*it>=next) return false;
+        }
+        return true;
+    }
